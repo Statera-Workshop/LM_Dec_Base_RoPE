@@ -1,0 +1,24 @@
+{
+ "model": "xt_rope",
+ "repo": "(new) lucidrains/x-transformers 2.31.7",
+ "target_repo": "LM_Dec_Base_RoPE",
+ "category": "Base",
+ "upstream": "lucidrains/x-transformers (MIT), pip 2.31.7",
+ "unified": [
+  "same decoder as xt_alibi; rotary position embedding (as in LLaMA)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "overfit",
+ "started": "2026-10-29 08:56:43",
+ "smoke": false,
+ "first_ce": 5.52893590927124,
+ "last_ce": 0.001435123267583549,
+ "passed": true,
+ "pass_loss": 0.5,
+ "steps": 400,
+ "seconds": 13.7,
+ "lr": 0.001,
+ "note": "overfit uses Adam 1e-3 on 4 x 256 bytes; only an implementation check",
+ "bf16": true
+}
