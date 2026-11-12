@@ -1,0 +1,50 @@
+{
+ "model": "xt_rope",
+ "repo": "(new) lucidrains/x-transformers 2.31.7",
+ "target_repo": "LM_Dec_Base_RoPE",
+ "category": "Base",
+ "upstream": "lucidrains/x-transformers (MIT), pip 2.31.7",
+ "unified": [
+  "same decoder as xt_alibi; rotary position embedding (as in LLaMA)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm08",
+ "started": "2026-11-09 19:07:56",
+ "smoke": false,
+ "steps": 6000,
+ "capped": false,
+ "bf16": true,
+ "final_bits": 3.2809629054785505,
+ "test": {
+  "512": {
+   "bits_full": 3.2562347239895435
+  },
+  "2048": {
+   "bits_full": 3.919231927653629,
+   "bits_last512": 3.2320435153321925,
+   "gain_from_history": -0.6871884123214365
+  },
+  "8192": {
+   "bits_full": 4.025557062866182,
+   "bits_last512": 3.2451218500257295,
+   "gain_from_history": -0.7804352128404521
+  }
+ },
+ "config": {
+  "train_len": 512,
+  "test_lens": [
+   512,
+   2048,
+   8192
+  ],
+  "batch": 16,
+  "steps": 6000,
+  "eval_every": 1000,
+  "eval_samples": 64,
+  "tail": 256,
+  "max_hours": 1.5
+ },
+ "minutes": 6.5,
+ "seconds": 390.9
+}
